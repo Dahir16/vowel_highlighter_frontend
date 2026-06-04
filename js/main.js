@@ -47,7 +47,7 @@ savedContainer.innerHTML = `
 `;
 
     try {
-        const response = await fetch('https://vowel-highlighter-backend.onrender.com//save', {
+        const response = await fetch('https://vowel-highlighter-backend.onrender.com/save', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ text })
@@ -103,7 +103,7 @@ async function loadSaved() {
         </div>
     `;
     try {
-        const response = await fetch('https://vowel-highlighter-backend.onrender.com//texts');
+        const response = await fetch('https://vowel-highlighter-backend.onrender.com/texts');
         const data = await response.json();
         savedContainer.innerHTML = '';
         
@@ -125,7 +125,7 @@ async function loadSaved() {
             deleteBtn.innerHTML = '<span class="material-symbols-outlined">delete</span>';
             deleteBtn.style = 'border: none; background-color: transparent; cursor: pointer;'
             deleteBtn.addEventListener('click', async () => {
-                const response = await fetch(`https://vowel-highlighter-backend.onrender.com//texts/${item.id}`, {
+                const response = await fetch(`https://vowel-highlighter-backend.onrender.com/texts/${item.id}`, {
                     method: 'DELETE'
                 });
                 if (response.ok) {
@@ -155,7 +155,7 @@ async function clearAll() {
         clearAllBtn.disabled = true;
         clearAllBtn.innerHTML = `<span class="spinner"></span> Clearing all...`;
         try {
-            const response = await fetch('https://vowel-highlighter-backend.onrender.com//texts', {
+            const response = await fetch('https://vowel-highlighter-backend.onrender.com/texts', {
                 method: 'DELETE'
             });
             
