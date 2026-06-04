@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- Google material icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <title>Vowel Highlighter</title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/theme.css"/>
+</head>
+<body>
+<div class="container">
+
+    <h1>Vowel Highlighter</h1>
+
+    <textarea
+      id="textInput"
+      placeholder="Type something..."
+    ></textarea>
+
+    <div class="actions">
+      
+      <button id="saveBtn" class="btn"><span class="material-symbols-outlined">save</span>Save</button>
+      <p>Letters: <span id="count">0</span></p>
+    </div>
+
+    <div id="preview"></div>
+
+    <h2>Saved Inputs</h2>
+    <div class="functions">
+      <div class="search">
+        <span class="material-symbols-outlined">search</span>
+        <input type="search" class="searchInput" name="" id="searchInput" placeholder="Search...">
+      </div>
+      <div class="content_actions">
+        <span class="material-symbols-outlined clear-all-btn filter">filter_alt</span>
+        <span class="material-symbols-outlined clear-all-btn">sort</span>
+        <button id="clearAllBtn" class=" clear-all-btn"><span class="material-symbols-outlined">clear_all</span>Clear All</button>
+      </div>
+    </div>
+
+    <div id="savedContainer"></div>
+
+  </div>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
